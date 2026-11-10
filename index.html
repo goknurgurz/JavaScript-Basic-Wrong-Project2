@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Classroom | Öğrenci Başarı Paneli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <aside class="sidebar"><a class="brand" href="#"><b>c.</b> classroom</a><small>MENÜ</small><a class="active"
+            href="#overview">▦　Genel Bakış</a><a href="#students">♙　Öğrenciler</a><a href="#add-student">＋　Öğrenci
+            Ekle</a>
+        <div class="profile"><i>GG</i><span><strong>Eğitmen Paneli</strong><small>Yönetici hesabı</small></span></div>
+    </aside>
+    <main>
+        <header>
+            <div><small>Panel / Genel Bakış</small>
+                <h1>Öğrenci başarı paneli</h1>
+            </div><span class="term">●　2026 — Güz Dönemi</span>
+        </header>
+        <section class="hero" id="overview">
+            <div><small>EĞİTİM TAKİP SİSTEMİ</small>
+                <h2>Gelişimi takip et.<br><em>Başarıyı görünür kıl.</em></h2>
+                <p>Öğrenci notlarını değerlendir, sınıf performansını incele ve gelişimi birlikte takip et.</p>
+            </div>
+            <div class="hero-art">
+                <div class="orbit"></div>
+                <div class="grade"><small>ORTALAMA</small><strong id="class-average-hero">—</strong><span>Genel sınıf
+                        ortalaması</span></div><b>✳</b>
+            </div>
+        </section>
+        <section class="stats">
+            <article><small>Toplam öğrenci</small><strong id="total-students">0</strong><span>Kayıtlı öğrenci</span>
+            </article>
+            <article><small>Sınıf ortalaması</small><strong id="class-average">—</strong><span>100 üzerinden</span>
+            </article>
+            <article><small>Başarılı öğrenci</small><strong id="passed-students">0</strong><span>Ortalaması 50 ve
+                    üzeri</span></article>
+            <article><small>Başarı oranı</small><strong id="success-rate">%0</strong><span>Sınıf genelinde</span>
+            </article>
+        </section>
+        <section class="layout">
+            <article class="panel" id="students">
+                <div class="panel-head">
+                    <div><small>SINIF LİSTESİ</small>
+                        <h3>Öğrenci değerlendirmeleri</h3>
+                    </div><span id="list-count">0 KAYIT</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ÖĞRENCİ</th>
+                                <th>VİZE</th>
+                                <th>FİNAL</th>
+                                <th>ORTALAMA</th>
+                                <th>HARF</th>
+                                <th>DURUM</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-table-body"></tbody>
+                    </table>
+                </div>
+                <div id="empty-state" class="empty"><b>✎</b><strong>Henüz öğrenci kaydı yok</strong><span>İlk öğrenciyi
+                        eklemek için formu kullan.</span></div>
+            </article>
+            <article class="panel form-panel" id="add-student">
+                <div class="panel-head">
+                    <div><small>YENİ KAYIT</small>
+                        <h3>Öğrenci ekle</h3>
+                    </div><b class="plus">＋</b>
+                </div>
+                <form id="student-form"><label for="student-name">Öğrenci adı soyadı</label><input id="student-name"
+                        placeholder="Örn. Deniz Yılmaz">
+                    <div class="fields">
+                        <div><label for="midterm">Vize notu</label><input id="midterm" type="number"
+                                placeholder="0–100"></div>
+                        <div><label for="final">Final notu</label><input id="final" type="number" placeholder="0–100">
+                        </div>
+                    </div>
+                    <p class="hint">ⓘ　Vize %40 · Final %60 · Geçme notu 50</p><button>Öğrenciyi değerlendir
+                        <span>→</span></button>
+                    <p id="form-feedback" aria-live="polite"></p>
+                </form>
+            </article>
+        </section>
+        <section class="lower">
+            <article class="panel">
+                <div class="panel-head">
+                    <div><small>SINIF ANALİZİ</small>
+                        <h3>Başarı dağılımı</h3>
+                    </div>
+                </div>
+                <div id="grade-distribution" class="distribution"><span>Öğrenci verileri eklendiğinde burada
+                        görünecek.</span></div>
+            </article>
+            <article class="panel tip"><b>✦</b>
+                <div><small>EĞİTMEN NOTU</small>
+                    <h3>Her sonuç bir gelişim fırsatı.</h3>
+                    <p>Notları tek başına değerlendirme. Öğrencinin hangi konuda desteğe ihtiyaç duyduğunu da gözlemle.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <footer>© 2026 Classroom <span>Öğrenme yolculuğu birlikte güzelleşir.</span></footer>
+    </main>
+</body>
+
+</html>
